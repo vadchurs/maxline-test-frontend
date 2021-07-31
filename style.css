@@ -1,3 +1,13 @@
+@font-face {
+    font-family: PF Din Text Comp Pro;
+    src: url("./fonts/pfdintextcomppro-bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Medium.ttf");
+}
+
 body * {
     margin: 0;
     padding: 0;
@@ -10,18 +20,11 @@ body * {
 
 .banner {
     width: 100%;
-    margin: 0 auto;
     max-width: 1920px;
+    margin: 0 auto;
     height: 1080px;
     position: relative;
-    border: 1px solid red;
     overflow: hidden;
-}
-
-.background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background: url("./images/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,6 +134,7 @@ body * {
     background: #FFFFFF;
     left: -4px;
 }
+
 .logoText {
     position: absolute;
     font-family: PF Din Text Comp Pro,sans-serif;
@@ -168,7 +172,7 @@ body * {
     position: absolute;
     left: 1058px;
     top: 360px;
-    font-size: 110px;
+    font-size: 163px;
     letter-spacing: -0.05em;
     text-shadow: 0px 0px 47.4067px rgba(18, 242, 75, 0.58);
     width: 372.78px;
@@ -194,33 +198,33 @@ body * {
     box-shadow: 0 0 7px white inset;
     font-size: 84.8088px;
     border-radius: 14px;
-    left: 330px;
-    width: 200px;
-    height: 150px;
+    left: 340px;
+    width: 160px;
+    height: 100px;
 }
 
 .sumBefore {
     position: absolute;
     transform: skew(-12deg);
-    width: 52.18px;
+    width: 40px;
     height: 112.08px;
     left: 1048px;
     top: 397px;
     background: #12F24B;
     mix-blend-mode: normal;
-    border-radius: 15.4598px;
+    border-radius: 12px;
     }
 
 .sumAfter {
     position: absolute;
-    width: 52.18px;
+    width: 30px;
     height: 72px;
-    left: 320px;
+    left: 334px;
     top: 50%;
     transform: translateY(-50%);
     background: #12F24B;
     mix-blend-mode: normal;
-    border-radius: 15.4598px;
+    border-radius: 10px;
     }
 
 .sum p {
@@ -237,6 +241,10 @@ body * {
     text-transform: uppercase;
 }
 
+.textAdaptive {
+    display: none;
+}
+
 .flexWrapper {
     position: absolute;
     display: flex;
@@ -245,11 +253,16 @@ body * {
     align-items: center;
 }
 
-.button {
+.buttonWrapper {
     background-color: #EF2A38;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 37px;
     padding: 15px 40px;
+    transform: skew(-12deg);
+}
+
+.button {
+    transform: skew(12deg);
 }
 
 .button span {
@@ -258,22 +271,27 @@ body * {
 
 .bonusText {
     margin-left: 30px;
-    font-size: 23px;
-    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+    color: #9D9DA1;
     font-weight: 500;
     text-decoration-line: underline;
 }
 
-.footer {
+.footerWrapper {
     position: absolute;
-    width: 1920px;
-    height: 90px;
+    width: 100%;
     left: 0;
     bottom: -0.03px;
     background: #21262B;
+}
+
+.footer {
     display: flex;
+    width: 1300px;
+    margin: 0 auto;
     justify-content: space-around;
     align-items: center;
+    padding: 24px 0;
 }
 
 .footer div:first-child {
@@ -284,25 +302,49 @@ body * {
     display: flex;
 }
 
-.footer .footerText {
-    width: 1000px;
+.footerText {
+    width: 700px;
     color: #80868B;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+}
+
+.footerTextAdaptive {
+    color: #80868B;
+    display: none;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    margin: 0 55px 20px 55px;
 }
 
 .footer .icon {
-    border: 1px solid white; 
+    border: 1px solid #4D5155; 
+    border-radius: 5px;
     padding: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.footer .firstIcon {
+    margin-left: 0;
 }
 
 .footer .icon span {
     margin-left: 20px;
+    font-size: 12px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
 }
 
 @media (max-width:1024px) {
     .banner {
-        max-width: 1024px;
         height: 768px;
+        background: url("./images/Background2.png");
+        
     }
 
     .foto {
@@ -322,74 +364,242 @@ body * {
     .takeIt {
         width: 170.74px;
         height: 66.05px;
-        left: 577.8px;
+        left: 552px;
         top: 188.61px;
         font-size: 66.1251px;
     }
 
     .sum {
-        left: 558px;
+        left: 534px;
         top: 260px;
-        font-size: 60px;
+        font-size: 114px;
         width: 272.78px;
         height: 122px;
     }
     
     .sumMoney {
-        box-shadow: 0 0 7px white inset;
-        font-size:60px;
-        left: 230px;
-        width: 150px;
-        height: 80px;
+        font-size:59px;
+        left: 246px;
+        width: 114px;
+        height: 75px;
     }
     
     .sumBefore {
-        width: 32.18px;
+        width: 30px;
         height: 80px;
-        left: 552px;
-        top: 276px;
+        left: 528px;
+        top: 281px;
         }
     
     .sumAfter {
-        width: 28.18px;
+        width: 22px;
         height: 52px;
-        left: 220px;
+        left: 240px;
         }
     
     .text {
-        top: 400px;
-        left: 530px;
+        top: 404px;
+        left: 504px;
         width: 420px;
         height: 140px;
-        font-size: 34px;
+        font-size: 52px;
     }
     
     .flexWrapper {
-        left: 500px;
-        top: 520px;
+        left: 550px;
+        top: 540px;
     }
     
-    .button {
+    .buttonWrapper {
         font-size: 24px;
-        padding: 10px 24px;
-    }
-    
-    .button span {
-        margin-left: 30px;
+        padding: 12px 22px;
     }
     
     .bonusText {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .footer {
-        width: 1024px;
-        height: 90px;
         justify-content: center;
+        width: 100%;
+        padding: 10px 0;
     }
 
     .footerText {
         display: none;
+    }
+
+    .footerTextAdaptive {
+        display: flex;
+    }
+}
+
+@media (max-width:768px) {
+    .banner {
+        height: 1024px;
+        background: url("./images/Background3.png");
+    }
+
+    .foto {
+        width: 685.64px;
+        height: 628.9px;
+        left: 0;
+        top: 302.1px;
+        background: url("./images/ап\ 3.png");
+        background-repeat: no-repeat;
+    }
+
+    .takeIt {
+        width: 185.55px;
+        height: 71.78px;
+        left: 300px;
+        top: 177.83px;
+    }
+
+    .sum {
+        left: 288px;
+        font-size: 110px;
+    }
+
+    .sumMoney {
+        font-size:50px;
+        left: 246px;
+        width: 100px;
+        height: 75px;
+    }
+    
+    .sumBefore {
+        left: 282px;
+    }
+    
+    .text {
+        left: 265px;
+    }
+    
+    .flexWrapper {
+        flex-direction: column;
+        left: 400px;
+    }
+    
+    .buttonWrapper {
+        font-size: 28px;
+        padding: 12px 22px;
+    }
+    
+    .button span {
+        margin-left: 20px;
+    }
+    
+    .bonusText {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .footer {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .footerText {
+        display: none;
+    }
+
+    .footerTextAdaptive {
+        display: flex;
+        margin: 0 20px 20px 20px;
+    }
+}
+
+@media (max-width:375px) {
+    .banner {
+        height: 667px;
+        background: url("./images/Background4.png");
+    }
+
+    .foto {
+        display: none;
+    }
+
+    .takeIt {
+        width: 307.61px;
+        height: 49.4px;
+        left: 67.39px;
+        top: 136.58px;
+        font-size: 53px;
+    }
+
+    .sum {
+        width: 180px;
+        height: 90px;
+        left: 36px;
+        top: 190px;
+        font-size: 62px;
+    }
+
+    .sumAfter {
+        left: 154px;
+        width: 18px;
+        height: 40px;
+    }
+
+    .sumMoney {
+        left: 160px;
+        width: 90px;
+        height: 56px;
+    }
+    
+    .sumBefore {
+        left: 30px;
+        top: 203px;
+        height: 62px;
+    }
+    
+    .text {
+        display: none;
+    }
+
+    .textAdaptive {
+        display: block;
+        position: absolute;
+        width: 100%;
+        font-size: 40px;
+        top: 275px;
+    }
+    
+    .flexWrapper {
+        flex-direction: column;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 360px;
+        font-size: 27px;
+        width: 375px;
+    }
+
+    .footer {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .footer .icon {
+        padding: 6px;
+        margin-left: 8px;
+    } 
+    
+    .footer .firstIcon {
+        margin-left: 0;
+    }  
+
+    .footerText {
+        display: none;
+    }
+
+    .footerTextAdaptive {
+        display: flex;
+        margin: 0 10px 20px 10px;
+        font-size: 11px;
     }
 }
 
