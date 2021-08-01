@@ -369,7 +369,7 @@ body * {
 }
 
 .action {
-    width: 90%;
+    width: 94%;
     background-color: white;
     margin: 0 auto;
     margin-top: 16px;
@@ -438,6 +438,35 @@ body * {
     font-family: Roboto;
     font-style: normal;
     font-size: 18px;
+}
+
+.modalText  {
+    width: 94%;
+    margin: 50px auto;
+}
+
+.modalText p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    margin-top: 15px;
+}
+
+.modalText p:first-child {
+    margin-top: 0;
+}
+
+.buttonWrapperModal {
+    background-color: #EF2A38;
+    border-radius: 7px;
+    font-size: 37px;
+    padding: 10px 0;
+    transform: skew(-12deg);
+    width: 44%;
+    text-align: center;
+    margin: 30px auto;
 }
 
 @media (max-width:1024px) {
@@ -717,6 +746,17 @@ body * {
     .modal {
         width: 345px;
         height: 586px;
+    }
+
+    .buttonWrapperModal {
+        background-color: #EF2A38;
+        border-radius: 7px;
+        font-size: 24px;
+        padding: 10px 0;
+        transform: skew(-12deg);
+        width: 68%;
+        text-align: center;
+        margin: 30px auto;
     }
 }
 
