@@ -235,7 +235,7 @@ body * {
     position: absolute;
     top: 580px;
     left: 1015px;
-    width: 580px;
+    width: 400px;
     height: 200px;
     font-size: 50px;
     text-transform: uppercase;
@@ -263,6 +263,7 @@ body * {
 
 .button {
     transform: skew(12deg);
+    cursor: pointer;
 }
 
 .button span {
@@ -338,6 +339,105 @@ body * {
     font-size: 12px;
     font-family: 'Roboto',sans-serif;
     font-style: normal;
+}
+
+.bg {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.85;
+    z-index: 2;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    width: 808px;
+    height: 780px; 
+    border: 1px solid white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    background-color: #F3F3F3;
+    border-radius: 12px;
+    overflow: auto;
+    display: none;
+}
+
+.action {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 16px;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 19px 0;
+    position: relative;
+}
+
+.firstAction {
+    margin-top: 40px;
+}
+
+.actionBottom>p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.actionBottom>h4 {
+    color: black;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.action>span {
+    color: #0A9F30;
+}
+
+.triangle {
+    position: absolute;
+    border: 40px solid transparent;
+    border-top: 12px solid white;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.modal>p {
+    margin: 50px auto 35px auto;
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.modal>h3 {
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
 }
 
 @media (max-width:1024px) {
@@ -432,6 +532,10 @@ body * {
     .footerTextAdaptive {
         display: flex;
     }
+
+    .modal {
+        height: 708px;
+    }
 }
 
 @media (max-width:768px) {
@@ -510,6 +614,11 @@ body * {
         display: flex;
         margin: 0 20px 20px 20px;
     }
+
+    .modal {
+        width: 708px;
+        height: 904px;
+    }
 }
 
 @media (max-width:375px) {
@@ -533,27 +642,29 @@ body * {
     .sum {
         width: 180px;
         height: 90px;
-        left: 36px;
+        left: 60px;
         top: 190px;
         font-size: 62px;
     }
 
     .sumAfter {
-        left: 154px;
+        left: 156px;
         width: 18px;
         height: 40px;
     }
 
     .sumMoney {
         left: 160px;
-        width: 90px;
+        width: 110px;
         height: 56px;
+        border-radius: 10px;
     }
     
     .sumBefore {
-        left: 30px;
-        top: 203px;
+        left: 55px;
+        top: 204px;
         height: 62px;
+        width: 26px;
     }
     
     .text {
@@ -566,6 +677,7 @@ body * {
         width: 100%;
         font-size: 40px;
         top: 275px;
+        text-align: center;
     }
     
     .flexWrapper {
@@ -601,7 +713,15 @@ body * {
         margin: 0 10px 20px 10px;
         font-size: 11px;
     }
+
+    .modal {
+        width: 345px;
+        height: 586px;
+    }
 }
+
+
+
 
 
 
